@@ -1,0 +1,1843 @@
+/* =================================
+   RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+    .announcement {
+    max-width: 1200px;
+    margin: 18px auto 0;
+    padding: 12px 20px;
+    background: #111111;
+    color: #ffffff;
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.announcement p {
+    margin: 0;
+}
+
+.announcement a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.announcement a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+.skip-link {
+    position: absolute;
+
+    left: -9999px;
+    top: 10px;
+
+    background: #171717;
+    color: white;
+
+    padding: 12px 18px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    z-index: 9999;
+}
+
+
+.skip-link:focus {
+    left: 10px;
+}
+
+
+a:focus-visible {
+    outline: 3px solid #b58a6d;
+
+    outline-offset: 4px;
+}
+
+
+/* =================================
+   TOP BAR
+================================= */
+
+.top-bar {
+    max-width: 1200px;
+
+    margin: 12px auto 0;
+
+    padding: 8px 30px;
+
+    background: #171717;
+
+    color: white;
+
+    border-radius: 14px 14px 0 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 11px;
+}
+
+
+.top-bar p {
+    color: #cfcfcf;
+}
+
+
+.top-bar a {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.site-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.logo {
+    color: #171717;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+ nav a {
+    color: #4b4b4b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+nav a:hover {
+    color: #000;
+}
+
+
+/* Header button */
+
+.header-button {
+    color: white;
+
+    background: #171717;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =================================
+   HERO
+=============================== */
+
+.hero {
+    max-width: 1200px;
+
+    min-height: 620px;
+
+    margin: auto;
+
+    padding: 60px 46px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.hero-content {
+    max-width: 560px;
+}
+
+
+/* Small heading */
+
+.eyebrow {
+    color: #a98a73;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 span {
+    color: #b58a6d;
+}
+
+
+/* Description */
+
+.hero-description {
+    max-width: 500px;
+
+    color: #6b6b6b;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.primary-button {
+    background: #171717;
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.secondary-button {
+    background: transparent;
+
+    color: #171717;
+
+    border: 1px solid #cfcfcf;
+}
+
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   HERO IMAGE
+=================================== */
+
+    .hero-image img {
+    width: min(100%, 500px);
+    height: 520px;
+    object-fit: cover;
+    display: block;
+
+    border-radius: 48% 52% 45% 55% / 35% 40% 60% 65%;
+}
+
+
+.image-shape {
+    width: min(100%, 500px);
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius:
+        48% 52% 45% 55%
+        /
+        35% 40% 60% 65%;
+}
+
+
+.image-shape img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px 46px 70px;
+}
+
+
+.skills-section h2 {
+    color: #999;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+
+.skills-list {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 45px;
+}
+
+
+.skills-list li {
+    color: #777;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =================================
+   TEMPORARY SECTIONS
+================================= */
+
+.placeholder-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 46px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.placeholder-section h2 {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+.site-footer {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 46px;
+
+    border-top: 1px solid #ddd;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 50px 30px;
+    }
+
+
+    .hero-content {
+        max-width: 700px;
+
+        margin: auto;
+    }
+
+
+    .hero-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+
+    .skills-section {
+        text-align: center;
+
+        padding-left: 30px;
+
+        padding-right: 30px;
+    }
+
+
+    .skills-list {
+        justify-content: center;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .top-bar {
+        margin: 0;
+
+        border-radius: 0;
+
+        padding: 8px 15px;
+
+        font-size: 10px;
+    }
+
+
+    .site-header {
+        padding: 20px;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+
+    nav {
+        width: 100%;
+
+        order: 3;
+    }
+
+
+    nav ul {
+        justify-content: center;
+
+        gap: 18px;
+    }
+
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    .header-button {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: auto;
+
+        padding: 45px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(40px, 12vw, 58px);
+
+        letter-spacing: -2px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .button {
+        text-align: center;
+
+        width: 100%;
+    }
+
+
+    .image-shape {
+        width: 100%;
+
+        max-width: 400px;
+
+        height: 380px;
+    }
+
+
+    .skills-section {
+        padding: 20px;
+
+        padding-bottom: 50px;
+    }
+
+
+    .skills-list {
+        gap: 18px 25px;
+    }
+
+
+    .placeholder-section {
+        padding: 70px 20px;
+    }
+
+
+    .placeholder-section h2 {
+        font-size: 32px;
+    }
+
+
+    .site-footer {
+        padding: 25px 20px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =================================
+   SMALL PHONES
+================================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 16px;
+    }
+
+
+    nav ul {
+        gap: 12px;
+    }
+
+
+    nav a {
+        font-size: 12px;
+    }
+
+
+    .hero {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .image-shape {
+        height: 320px;
+    }
+
+}
+ /* =================================
+    PROJECTS
+ ================================= */
+
+.projects-intro {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 46px 50px;
+}
+
+.projects-intro h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.projects-intro p {
+    max-width: 600px;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.projects-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 46px 90px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+.project-card {
+    padding: 35px;
+
+    background: #f7f7f7;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 24px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+.project-number {
+    color: #a98a73;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.project-card h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.project-card p {
+    color: #6b6b6b;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.project-tech {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.project-tech li {
+    padding: 8px 13px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* Project button */
+
+.project-link {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 11px 18px;
+
+    background: #171717;
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.project-link:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .projects-intro {
+        padding: 60px 20px 30px;
+    }
+
+    .projects-intro h1 {
+        letter-spacing: -2px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+        padding: 20px 20px 60px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+}
+ /* =================================
+    PROJECTS
+ ================================= */
+
+.projects-intro {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 46px 50px;
+}
+
+.projects-intro h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.projects-intro p {
+    max-width: 600px;
+    color: #6b6b6b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.projects-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 46px 90px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+.project-card {
+    padding: 35px;
+
+    background: #f7f7f7;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 24px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+.project-number {
+    color: #a98a73;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.project-card h2 {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+
+.project-card p {
+    color: #6b6b6b;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+.project-tech {
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.project-tech li {
+    padding: 8px 13px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* Project button */
+
+.project-link {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 11px 18px;
+
+    background: #171717;
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.project-link:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .projects-intro {
+        padding: 60px 20px 30px;
+    }
+
+    .projects-intro h1 {
+        letter-spacing: -2px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+        padding: 20px 20px 60px;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+}
+/* =================================
+   CONTACT FORM
+================================= */
+
+.contact-form {
+    max-width: 600px;
+
+    margin-top: 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+.contact-form div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.contact-form label {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    background: #fafafa;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #171717;
+}
+
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+
+.contact-form button {
+    border: none;
+
+    cursor: pointer;
+
+    width: fit-content;
+}
+/* =================================
+   INNER PAGES - MODERN LOOK
+================================= */
+
+.placeholder-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 46px;
+}
+
+
+/* Better headings */
+
+.placeholder-section h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+}
+
+
+.placeholder-section h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+
+/* Inner page paragraphs */
+
+.placeholder-section .hero-description {
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+
+/* =================================
+   SECTION SEPARATION
+================================= */
+
+.placeholder-section + .placeholder-section {
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* =================================
+   PROJECT PAGE
+================================= */
+
+.placeholder-section[aria-labelledby="guessing-game-title"],
+.placeholder-section[aria-labelledby="password-generator-title"] {
+    position: relative;
+
+    margin-top: 20px;
+
+    border: 1px solid #e8e8e8;
+
+    border-radius: 20px;
+
+    background: #fafafa;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+
+.placeholder-section[aria-labelledby="guessing-game-title"]::before {
+    content: "01";
+
+    position: absolute;
+
+    top: 28px;
+    right: 32px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #999;
+
+    letter-spacing: 2px;
+}
+
+
+.placeholder-section[aria-labelledby="password-generator-title"]::before {
+    content: "02";
+
+    position: absolute;
+
+    top: 28px;
+    right: 32px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #999;
+
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 0;
+
+    margin-top: 25px;
+
+    list-style: none;
+}
+
+
+.skills-list li {
+    padding: 10px 16px;
+
+    border: 1px solid #dedede;
+
+    border-radius: 30px;
+
+    background: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+
+    border-color: #171717;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =================================
+   CONTACT DETAILS
+================================= */
+
+.contact-details {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 20px 46px 90px;
+}
+
+
+.contact-details h2 {
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+
+.contact-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+
+.contact-item span {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #999;
+}
+
+
+.contact-item a,
+.contact-item p {
+    color: #171717;
+
+    text-decoration: none;
+
+    margin: 0;
+
+    font-size: 15px;
+}
+
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================
+   CONTACT FORM
+================================= */
+
+.contact-form {
+    background: #fafafa;
+
+    border: 1px solid #e8e8e8;
+
+    border-radius: 20px;
+
+    padding: 32px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    background: white;
+
+    transition: 0.2s ease;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .placeholder-section {
+        padding: 55px 20px;
+    }
+
+
+    .placeholder-section h1 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .placeholder-section h2 {
+        font-size: 28px;
+    }
+
+
+    .placeholder-section[aria-labelledby="guessing-game-title"],
+    .placeholder-section[aria-labelledby="password-generator-title"] {
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+        padding: 35px 25px;
+    }
+
+
+    .contact-form {
+        padding: 22px;
+    }
+
+
+    .contact-details {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .contact-item {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+/* =================================
+   MINIMAL ACCENT COLORS
+================================= */
+
+:root {
+    --accent: #635bff;
+    --accent-light: #f3f1ff;
+    --accent-border: #dcd8ff;
+}
+
+
+/* =================================
+   INNER PAGE HEADINGS
+================================= */
+
+.placeholder-section h1 {
+    color: #171717;
+}
+
+.placeholder-section h2 {
+    color: #25213d;
+}
+
+
+/* Small accent line */
+
+.eyebrow {
+    color: var(--accent);
+}
+
+
+/* =================================
+   PROJECT SECTIONS
+================================= */
+
+.placeholder-section[aria-labelledby="guessing-game-title"],
+.placeholder-section[aria-labelledby="password-generator-title"] {
+    border-color: var(--accent-border);
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        var(--accent-light) 100%
+    );
+}
+
+
+/* Project number */
+
+.placeholder-section[aria-labelledby="guessing-game-title"]::before,
+.placeholder-section[aria-labelledby="password-generator-title"]::before {
+    color: var(--accent);
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-list li {
+    background: #ffffff;
+
+    border-color: var(--accent-border);
+
+    transition: all 0.2s ease;
+}
+
+
+.skills-list li:hover {
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+    background: var(--accent-light);
+}
+
+
+/* =================================
+   CONTACT FORM
+================================= */
+
+.contact-form {
+    border-color: var(--accent-border);
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #faf9ff 100%
+    );
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(99, 91, 255, 0.10);
+}
+
+
+/* =================================
+   CONTACT DETAILS
+================================= */
+
+.contact-details h2 {
+    color: #25213d;
+}
+
+
+.contact-item a {
+    color: var(--accent);
+}
+
+
+.contact-item a:hover {
+    color: #4b45c6;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.primary-button {
+    background: var(--accent);
+
+    box-shadow:
+        0 10px 25px rgba(99, 91, 255, 0.20);
+}
+
+
+.primary-button:hover {
+    background: #5149d8;
+}
+/* =================================
+   SOFT / MUTED INNER PAGE THEME
+================================= */
+
+:root {
+    --ink: #202124;
+
+    --muted-text: #6f7278;
+
+    --lavender: #eeeafd;
+    --lavender-dark: #6f68a8;
+
+    --sage: #eaf3ed;
+    --sage-dark: #5f806b;
+
+    --blue-soft: #eaf1f8;
+    --blue-dark: #607994;
+
+    --beige: #f6f0e7;
+    --beige-dark: #8b7962;
+
+    --soft-border: #e5e4e1;
+}
+
+
+/* =================================
+   GENERAL INNER PAGE
+================================= */
+
+.placeholder-section {
+    position: relative;
+}
+
+
+.placeholder-section h1 {
+    color: var(--ink);
+}
+
+
+.placeholder-section h2 {
+    color: #303238;
+}
+
+
+.placeholder-section .hero-description {
+    color: var(--muted-text);
+
+    line-height: 1.85;
+}
+
+
+/* =================================
+   EYEBROW
+================================= */
+
+.placeholder-section .eyebrow {
+    color: var(--lavender-dark);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =================================
+   ABOUT PAGE
+================================= */
+
+/* Story */
+
+.placeholder-section[aria-labelledby="story-title"] {
+    background: var(--sage);
+
+    border-radius: 20px;
+
+    margin: 20px auto;
+
+    border: 1px solid #dce9df;
+}
+
+
+/* Education */
+
+.placeholder-section[aria-labelledby="education-title"] {
+    background: var(--blue-soft);
+
+    border-radius: 20px;
+
+    margin: 20px auto;
+
+    border: 1px solid #dce3eb;
+}
+
+
+/* What I'm Learning */
+
+.placeholder-section[aria-labelledby="learning-title"] {
+    background: var(--beige);
+
+    border-radius: 20px;
+
+    margin: 20px auto;
+
+    border: 1px solid #ebe2d5;
+}
+
+
+/* Goal */
+
+.placeholder-section[aria-labelledby="goal-title"] {
+    background: var(--lavender);
+
+    border-radius: 20px;
+
+    margin: 20px auto;
+
+    border: 1px solid #e1def5;
+}
+
+
+/* =================================
+   SKILLS
+================================= */
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid var(--soft-border);
+
+    color: #45474c;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+
+    background: white;
+
+    border-color: var(--lavender-dark);
+
+    color: var(--lavender-dark);
+}
+
+
+/* =================================
+   PROJECTS
+================================= */
+
+.placeholder-section[aria-labelledby="guessing-game-title"] {
+    background: var(--blue-soft);
+
+    border: 1px solid #dce5ee;
+
+    border-radius: 22px;
+
+    margin: 25px auto;
+}
+
+
+.placeholder-section[aria-labelledby="password-generator-title"] {
+    background: var(--sage);
+
+    border: 1px solid #dce9df;
+
+    border-radius: 22px;
+
+    margin: 25px auto;
+}
+
+
+/* Project numbers */
+
+.placeholder-section[aria-labelledby="guessing-game-title"]::before {
+    color: var(--blue-dark);
+
+    background: rgba(255, 255, 255, 0.7);
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+}
+
+
+.placeholder-section[aria-labelledby="password-generator-title"]::before {
+    color: var(--sage-dark);
+
+    background: rgba(255, 255, 255, 0.7);
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+}
+
+
+/* =================================
+   CONTACT
+================================= */
+
+.contact-form {
+    background: #faf9f6;
+
+    border: 1px solid #e4e1db;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 35px rgba(40, 40, 40, 0.05);
+}
+
+
+.contact-form label {
+    color: #4e5055;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    background: #ffffff;
+
+    border-color: #dededb;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--lavender-dark);
+
+    box-shadow:
+        0 0 0 3px rgba(111, 104, 168, 0.10);
+}
+
+
+/* Send button */
+
+.primary-button {
+    background: #68619a;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(104, 97, 154, 0.18);
+}
+
+
+.primary-button:hover {
+    background: #595384;
+}
+
+
+/* =================================
+   CONTACT DETAILS
+================================= */
+
+.contact-details {
+    margin-top: 25px;
+}
+
+
+.contact-details h2 {
+    color: #303238;
+}
+
+
+.contact-item {
+    border-bottom: 1px solid #e8e6e2;
+}
+
+
+.contact-item span {
+    color: #99928a;
+}
+
+
+.contact-item a {
+    color: #68619a;
+
+    transition: color 0.2s ease;
+}
+
+
+.contact-item a:hover {
+    color: #4f4977;
+}
+
+
+/* =================================
+   SUBTLE HOVER EFFECT
+================================= */
+
+.placeholder-section[aria-labelledby="story-title"],
+.placeholder-section[aria-labelledby="education-title"],
+.placeholder-section[aria-labelledby="learning-title"],
+.placeholder-section[aria-labelledby="goal-title"],
+.placeholder-section[aria-labelledby="guessing-game-title"],
+.placeholder-section[aria-labelledby="password-generator-title"] {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.placeholder-section[aria-labelledby="story-title"]:hover,
+.placeholder-section[aria-labelledby="education-title"]:hover,
+.placeholder-section[aria-labelledby="learning-title"]:hover,
+.placeholder-section[aria-labelledby="goal-title"]:hover,
+.placeholder-section[aria-labelledby="guessing-game-title"]:hover,
+.placeholder-section[aria-labelledby="password-generator-title"]:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(40, 40, 40, 0.05);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+    .placeholder-section[aria-labelledby="story-title"],
+    .placeholder-section[aria-labelledby="education-title"],
+    .placeholder-section[aria-labelledby="learning-title"],
+    .placeholder-section[aria-labelledby="goal-title"],
+    .placeholder-section[aria-labelledby="guessing-game-title"],
+    .placeholder-section[aria-labelledby="password-generator-title"] {
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+        border-radius: 18px;
+    }
+
+}
